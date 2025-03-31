@@ -18,5 +18,5 @@ public class YdbTestHelpers : RelationalTestHelpers
         services.AddEntityFrameworkYdb();
 
     public override DbContextOptionsBuilder UseProviderOptions(DbContextOptionsBuilder optionsBuilder) =>
-        optionsBuilder.UseYdb(new YdbConnection("Port=2136;Host=localhost;Database=/local"));
+        optionsBuilder.UseYdb("Port=2136;Host=localhost;Database=/local");
 }
