@@ -19,7 +19,7 @@ public class YdbSqlAliasManager : SqlAliasManager
     private sealed class AliasRewriter : ExpressionVisitor
     {
         private bool isRootSelect = true;
-        
+
         [return: NotNullIfNotNull("node")]
         public override Expression? Visit(Expression? node) => node switch
         {
@@ -60,7 +60,7 @@ public class YdbSqlAliasManager : SqlAliasManager
             );
             return news;
         }
-        
+
         private Expression VisitTableBase(TableExpressionBase tableExpression)
             => tableExpression switch
             {
